@@ -820,7 +820,7 @@ def scene_identity(d, f):
 
     # name — the person, so display face and sentence case
     if t >= 1:
-        text(d, x0, 78, "Erwin Lejeune", F_DISP_XL, HEADING)
+        text(d, x0, 78, "Yash Pandey", F_DISP_XL, HEADING)
 
     # accent moment for this scene: the rule under the name. Sits clear of the
     # descender on the "j".
@@ -833,8 +833,8 @@ def scene_identity(d, f):
     # goes on to draw
     if t >= 5:
         n = int((t - 5) * 3.4)
-        l1 = "Many agents, one graph."
-        l2 = "The plan they can all agree on."
+        l1 = "One job, many roles. DevOps is where development meets operations."
+        l2 = "Automating today so teams can innovate tomorrow."
         text(d, x0, 188, l1[:n], F_DISP_M, MUTED)
         if n > len(l1):
             text(d, x0, 214, l2[:n - len(l1)], F_DISP_M, MUTED)
