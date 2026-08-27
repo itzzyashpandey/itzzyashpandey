@@ -722,9 +722,9 @@ TRAJECTORY = [
     (2019.6, "2023", "B.Tech in IT"),
     #(2020.7, "ecole centrale", "research"),
     (2021.5, "2024", "HCL Tech - GET"),
-    #(2022.6, "tii", "lead, autonomy"),
-    #(2024.3, "unchained", "agentic ai"),
-    (2026.3, "2025", "DevOps at HCL Tech"),
+    (2022.6, "2025", "DevOps at HCL Tech"),
+    #(2024.3, "2025", "agentic ai"),
+    #(2026.3, "2025", "DevOps at HCL Tech"),
 ]
 TRAJ_T0, TRAJ_T1 = 2018.6, 2026.9
 
@@ -961,7 +961,7 @@ def scene_trajectory(d, f):
     if t >= 20:
         a = ease_out(seg(t, 20, 6))
         ctext(d, W / 2, H - 66,
-              "2,551 hrs tracked · 3,850 contributions in 2026 · 83 public repos",
+              "300+ production issues fixed · 3yrs+ expirence in zabbix and splunk as admin · 50% percent work reduced by automation",
               F_MONO_XS, fade(FAINT, a))
 
 
