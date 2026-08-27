@@ -376,13 +376,13 @@ class Rain:
 BT_H = 24.0
 
 BT_NODES = {
-    "root":    (440.0, 100.0, "\u2192", "sequence"),
-    "guard":   (270.0, 172.0, "?", "fallback"),
-    "run":     (610.0, 172.0, "\u21c9", "parallel"),
-    "battery": (185.0, 244.0, "\u25cb", "battery ok"),
-    "rtl":     (355.0, 244.0, "\u25b8", "return home"),
-    "track":   (525.0, 244.0, "\u25b8", "track target"),
-    "stream":  (695.0, 244.0, "\u25b8", "stream tlm"),
+    "root":    (440.0, 100.0, "\u2192", "Develop"),
+    "guard":   (270.0, 172.0, "?", "Build"),
+    "run":     (610.0, 172.0, "\u21c9", "Deploy"),
+    "battery": (185.0, 244.0, "\u25cb", "CI/CD"),
+    "rtl":     (355.0, 244.0, "\u25b8", "Security"),
+    "track":   (525.0, 244.0, "\u25b8", "Scale"),
+    "stream":  (695.0, 244.0, "\u25b8", "Monitor"),
 }
 
 BT_EDGES = [
@@ -464,12 +464,12 @@ def draw_bt_edge(d, parent, child, t, k):
 # --------------------------------------------------------------------------
 
 GRAPH_NODES = [
-    ("planner", 236.0, 140.0),
-    ("perception", 158.0, 258.0),
-    ("navigation", 348.0, 318.0),
-    ("mission", 528.0, 132.0),
-    ("telemetry", 712.0, 232.0),
-    ("operator", 588.0, 330.0),
+    ("Git", 236.0, 140.0),
+    ("Azure DevOps", 158.0, 258.0),
+    ("Linux", 348.0, 318.0),
+    ("Teraform", 528.0, 132.0),
+    ("Kuberetes", 712.0, 232.0),
+    ("Zabbix", 588.0, 330.0),
 ]
 
 GRAPH_EDGES = [(0, 1), (0, 2), (0, 3), (1, 2), (3, 4), (3, 5), (4, 5), (2, 5)]
@@ -567,7 +567,7 @@ def status_bar(d, k, label):
     if col != BG:
         d.line([S(28), S(H - 30), S(W - 28), S(H - 30)], fill=col, width=max(1, int(S(1))))
     text(d, 28, H - 24, label, F_MONO_XS, fade(FAINT, k))
-    text(d, W - 28, H - 24, "elejeune.me", F_MONO_XS, fade(FAINT, k), anchor="ra")
+    text(d, W - 28, H - 24, "itzzyashpandey", F_MONO_XS, fade(FAINT, k), anchor="ra")
 
 
 # --------------------------------------------------------------------------
@@ -719,12 +719,12 @@ SPEC = [
 ]
 
 TRAJECTORY = [
-    (2019.6, "ingeniarius", "robotics"),
-    (2020.7, "ecole centrale", "research"),
-    (2021.5, "coalescent", "founding eng"),
-    (2022.6, "tii", "lead, autonomy"),
-    (2024.3, "unchained", "agentic ai"),
-    (2026.3, "sirb.ai", "lead, autonomy"),
+    (2019.6, "2023", "B.Tech in IT"),
+    #(2020.7, "ecole centrale", "research"),
+    (2021.5, "2024", "HCL Tech - GET"),
+    (2022.6, "2025", "DevOps at HCL Tech"),
+    #(2024.3, "2025", "agentic ai"),
+    #(2026.3, "2025", "DevOps at HCL Tech"),
 ]
 TRAJ_T0, TRAJ_T1 = 2018.6, 2026.9
 
@@ -900,7 +900,7 @@ def scene_graph(d, f, positions, alive):
     if t >= 1:
         text(d, 54, 52, "\u2192 ", F_MONO, fade(ACCENT, 0.9))
         n = int((t - 1) * 1.9)
-        text(d, 54 + 2 * CW, 52, "building pipelines"[:n], F_MONO, BODY)
+        text(d, 54 + 2 * CW, 52, "collaborating tools.."[:n], F_MONO, BODY)
 
     draw_graph(d, t, ease_out(seg(t, 5, 6)), positions, alive)
 
@@ -961,7 +961,7 @@ def scene_trajectory(d, f):
     if t >= 20:
         a = ease_out(seg(t, 20, 6))
         ctext(d, W / 2, H - 66,
-              "2,551 hrs tracked · 3,850 contributions in 2026 · 83 public repos",
+              "300+ production issues fixed · 3yrs+ expirence in zabbix and splunk as admin · 50% percent work reduced by automation",
               F_MONO_XS, fade(FAINT, a))
 
 
@@ -974,11 +974,11 @@ def scene_sign(d, f):
 
     if t >= 3:
         b = ease_out(seg(t, 3, 4))
-        ctext(d, cx, 206, "guilyx", F_MONO_XL, fade(HEADING, b))
+        ctext(d, cx, 206, "itzzyashpandey", F_MONO_XL, fade(HEADING, b))
 
     if t >= 5:
         b = ease_out(seg(t, 5, 4))
-        ctext(d, cx, 256, "Erwin Lejeune — lead architect, robotics & ai systems",
+        ctext(d, cx, 256, "Yash Pandey — Devops Engineer, Cloud support & SRE",
               F_MONO_S, fade(MUTED, b))
 
     if t >= 7:
@@ -989,8 +989,8 @@ def scene_sign(d, f):
 
     if t >= 9:
         b = ease_out(seg(t, 9, 3))
-        left = "github.com/guilyx"
-        right = "elejeune.me"
+        left = "github.com/itzzyashpandey"
+        right = "itzzyashpandey"
         gap = 4.0
         total = text_w(left, F_MONO_S) + text_w(" · ", F_MONO_S) + text_w(right, F_MONO_S)
         x = cx - total / 2
@@ -1002,7 +1002,7 @@ def scene_sign(d, f):
         _ = gap
 
     if t >= 11 and (f // 4) % 2 == 0:
-        half = text_w("guilyx", F_MONO_XL) / 2.0
+        half = text_w("itzzyashpandey", F_MONO_XL) / 2.0
         cwx = cw(F_MONO_XL)
         x = cx + half + cwx * 0.35
         d.rectangle([S(x), S(214), S(x + cwx * 0.8), S(240)],
