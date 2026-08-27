@@ -376,13 +376,13 @@ class Rain:
 BT_H = 24.0
 
 BT_NODES = {
-    "root":    (440.0, 100.0, "\u2192", "sequence"),
-    "guard":   (270.0, 172.0, "?", "fallback"),
-    "run":     (610.0, 172.0, "\u21c9", "parallel"),
-    "battery": (185.0, 244.0, "\u25cb", "battery ok"),
-    "rtl":     (355.0, 244.0, "\u25b8", "return home"),
-    "track":   (525.0, 244.0, "\u25b8", "track target"),
-    "stream":  (695.0, 244.0, "\u25b8", "stream tlm"),
+    "root":    (440.0, 100.0, "\u2192", "Develop"),
+    "guard":   (270.0, 172.0, "?", "Build"),
+    "run":     (610.0, 172.0, "\u21c9", "Deploy"),
+    "battery": (185.0, 244.0, "\u25cb", "CI/CD"),
+    "rtl":     (355.0, 244.0, "\u25b8", "Security"),
+    "track":   (525.0, 244.0, "\u25b8", "Scale"),
+    "stream":  (695.0, 244.0, "\u25b8", "Monitor"),
 }
 
 BT_EDGES = [
