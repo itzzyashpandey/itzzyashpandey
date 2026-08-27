@@ -567,7 +567,7 @@ def status_bar(d, k, label):
     if col != BG:
         d.line([S(28), S(H - 30), S(W - 28), S(H - 30)], fill=col, width=max(1, int(S(1))))
     text(d, 28, H - 24, label, F_MONO_XS, fade(FAINT, k))
-    text(d, W - 28, H - 24, "elejeune.me", F_MONO_XS, fade(FAINT, k), anchor="ra")
+    text(d, W - 28, H - 24, "itzzyashpandey", F_MONO_XS, fade(FAINT, k), anchor="ra")
 
 
 # --------------------------------------------------------------------------
@@ -989,8 +989,8 @@ def scene_sign(d, f):
 
     if t >= 9:
         b = ease_out(seg(t, 9, 3))
-        left = "github.com/guilyx"
-        right = "elejeune.me"
+        left = "github.com/itzzyashpandey"
+        right = "itzzyashpandey"
         gap = 4.0
         total = text_w(left, F_MONO_S) + text_w(" · ", F_MONO_S) + text_w(right, F_MONO_S)
         x = cx - total / 2
