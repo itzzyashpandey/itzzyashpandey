@@ -687,12 +687,12 @@ HOLD_MS = {
 
 TERM_LINES = [
     # (start, indent, segments[(text, colour)], typed?)
-    (0,  0, [("guilyx", MUTED), (" on ", FAINT), ("master", MUTED),
+    (0,  0, [("DevOps", MUTED), (" on ", FAINT), ("master", MUTED),
              (" [!?] ", FAINT), ("took 16s", FAINT)], False),
-    (2,  0, [("→ ", ACCENT), ("ssh erwin@elejeune.me", BODY)], True),
+    (2,  0, [("→ ", ACCENT), ("ssh itzzyashpandey", BODY)], True),
     (17, 1, [("handshake ", FAINT), ("·" * 14, LINE), (" ok", BODY)], False),
     (20, 1, [("locale ", FAINT), ("·" * 17, LINE),
-             (" abu dhabi, uae · utc+04", BODY)], False),
+             (" Banglore Lucknow, IND · utc+05:30", BODY)], False),
     (22, 0, [("→ ", ACCENT), ("whoami", BODY)], True),
 ]
 
@@ -701,10 +701,10 @@ TERM_LINES = [
 # waits for the optimum. Brand voice allows exactly one joke and it has to be
 # true, so this is the one, and it sets up the graph scene after it.
 JOKE_LINES = [
-    (0,  0, [("guilyx", MUTED), (" on ", FAINT), ("master", MUTED),
+    (0,  0, [("Devops", MUTED), (" on ", FAINT), ("master", MUTED),
              (" [!?]", FAINT)], False),
-    (2,  0, [("→ ", ACCENT), ("mapf solve --optimal", BODY)], True),
-    (15, 1, [("optimal mapf is np-hard.", BODY)], False),
+    (2,  0, [("→ ", ACCENT), ("Prod Pipeline --issues", BODY)], True),
+    (15, 1, [("Production issues are critical .", BODY)], False),
     (18, 1, [("solving it anyway.", MUTED)], False),
 ]
 
@@ -712,10 +712,10 @@ JOKE_LINES = [
 # the SIRB.AI bullet on multi-agent planning, the TII one on behaviour
 # orchestration, and the Unchained/Kymatics work on agentic orchestration.
 SPEC = [
-    ("role", "lead architect · robotics & ai systems"),
-    ("based", "abu dhabi, uae"),
-    ("building", "multi-agent planning · behaviour orchestration"),
-    ("also", "agentic orchestration · mcp"),
+    ("role", "Devops Engineer · Cloud Engineer "),
+    ("based", "Lucknow, IND"),
+    ("building", "pipelines . automating workflows . infrastructure into code"),
+    ("also", "monitoring and improving reliability"),
 ]
 
 TRAJECTORY = [
@@ -860,7 +860,7 @@ def scene_bt(d, f):
     if t >= 1:
         text(d, 54, 52, "\u2192 ", F_MONO, fade(ACCENT, 0.9))
         n = int((t - 1) * 1.9)
-        text(d, 54 + 2 * CW, 52, "bt tick --mission patrol"[:n], F_MONO, BODY)
+        text(d, 54 + 2 * CW, 52, "devops --workflow"[:n], F_MONO, BODY)
 
     # the tree draws in a level at a time, edges with their child
     for parent, child in BT_EDGES:
@@ -872,19 +872,19 @@ def scene_bt(d, f):
 
     if t >= 32:
         a = ease_out(seg(t, 32, 5))
-        ctext(d, W / 2, 312, "the tick descends. the leaves answer.",
+        ctext(d, W / 2, 312, "ship often. recover faster. leave no trace.",
               F_MONO_S, fade(MUTED, a))
     if t >= 34:
         a = ease_out(seg(t, 34, 4))
-        ctext(d, W / 2, 334, "behaviour orchestration \u00b7 lifecycle management",
+        ctext(d, W / 2, 334, "automating deployment. scaling infrastructure. ensuring availability.",
               F_MONO_XS, fade(FAINT, a * 0.9))
 
     # readout, in the machine register
     if t >= 20:
         a = ease_out(seg(t, 20, 6))
         rows = [
-            ("tick", "0042"),
-            ("nodes", "7 \u00b7 1 not reached"),
+            ("jobs", "completed"),
+            ("nodes", "deployed"),
             ("status", "running"),
         ]
         for i, (k, v) in enumerate(rows):
@@ -900,7 +900,7 @@ def scene_graph(d, f, positions, alive):
     if t >= 1:
         text(d, 54, 52, "\u2192 ", F_MONO, fade(ACCENT, 0.9))
         n = int((t - 1) * 1.9)
-        text(d, 54 + 2 * CW, 52, "orchestrate agents"[:n], F_MONO, BODY)
+        text(d, 54 + 2 * CW, 52, "building pipelines"[:n], F_MONO, BODY)
 
     draw_graph(d, t, ease_out(seg(t, 5, 6)), positions, alive)
 
@@ -911,7 +911,7 @@ def scene_graph(d, f, positions, alive):
     if t >= 27:
         a = ease_out(seg(t, 27, 4))
         ctext(d, W / 2, 336,
-              "multi-agent pathfinding \u00b7 agentic orchestration",
+              "multi-stage builds · trusted artifacts",
               F_MONO_XS, fade(FAINT, a * 0.9))
 
 
@@ -923,7 +923,7 @@ def scene_trajectory(d, f):
 
     text(d, 54, 54, "→ ", F_MONO, fade(ACCENT, 0.9))
     n = int(max(0, t) * 2.4)
-    text(d, 54 + 2 * CW, 54, "trajectory --since 2018"[:n], F_MONO, BODY)
+    text(d, 54 + 2 * CW, 54, "trajectory --since 2019"[:n], F_MONO, BODY)
 
     def px(year):
         return ax0 + (year - TRAJ_T0) / (TRAJ_T1 - TRAJ_T0) * (ax1 - ax0)
