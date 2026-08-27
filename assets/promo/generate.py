@@ -464,12 +464,12 @@ def draw_bt_edge(d, parent, child, t, k):
 # --------------------------------------------------------------------------
 
 GRAPH_NODES = [
-    ("planner", 236.0, 140.0),
-    ("perception", 158.0, 258.0),
-    ("navigation", 348.0, 318.0),
-    ("mission", 528.0, 132.0),
-    ("telemetry", 712.0, 232.0),
-    ("operator", 588.0, 330.0),
+    ("Git", 236.0, 140.0),
+    ("Azure DevOps", 158.0, 258.0),
+    ("Linux", 348.0, 318.0),
+    ("Teraform", 528.0, 132.0),
+    ("Kuberetes", 712.0, 232.0),
+    ("Zabbix", 588.0, 330.0),
 ]
 
 GRAPH_EDGES = [(0, 1), (0, 2), (0, 3), (1, 2), (3, 4), (3, 5), (4, 5), (2, 5)]
@@ -719,12 +719,12 @@ SPEC = [
 ]
 
 TRAJECTORY = [
-    (2019.6, "ingeniarius", "robotics"),
-    (2020.7, "ecole centrale", "research"),
-    (2021.5, "coalescent", "founding eng"),
-    (2022.6, "tii", "lead, autonomy"),
-    (2024.3, "unchained", "agentic ai"),
-    (2026.3, "sirb.ai", "lead, autonomy"),
+    (2019.6, "2023", "B.Tech in IT"),
+    #(2020.7, "ecole centrale", "research"),
+    (2021.5, "2024", "HCL Tech - GET"),
+    #(2022.6, "tii", "lead, autonomy"),
+    #(2024.3, "unchained", "agentic ai"),
+    (2026.3, "2025", "DevOps at HCL Tech"),
 ]
 TRAJ_T0, TRAJ_T1 = 2018.6, 2026.9
 
@@ -900,7 +900,7 @@ def scene_graph(d, f, positions, alive):
     if t >= 1:
         text(d, 54, 52, "\u2192 ", F_MONO, fade(ACCENT, 0.9))
         n = int((t - 1) * 1.9)
-        text(d, 54 + 2 * CW, 52, "building pipelines"[:n], F_MONO, BODY)
+        text(d, 54 + 2 * CW, 52, "collaborating tools.."[:n], F_MONO, BODY)
 
     draw_graph(d, t, ease_out(seg(t, 5, 6)), positions, alive)
 
@@ -974,11 +974,11 @@ def scene_sign(d, f):
 
     if t >= 3:
         b = ease_out(seg(t, 3, 4))
-        ctext(d, cx, 206, "guilyx", F_MONO_XL, fade(HEADING, b))
+        ctext(d, cx, 206, "itzzyashpandey", F_MONO_XL, fade(HEADING, b))
 
     if t >= 5:
         b = ease_out(seg(t, 5, 4))
-        ctext(d, cx, 256, "Erwin Lejeune — lead architect, robotics & ai systems",
+        ctext(d, cx, 256, "Yash Pandey — Devops Engineer, Cloud support & SRE",
               F_MONO_S, fade(MUTED, b))
 
     if t >= 7:
@@ -1002,7 +1002,7 @@ def scene_sign(d, f):
         _ = gap
 
     if t >= 11 and (f // 4) % 2 == 0:
-        half = text_w("guilyx", F_MONO_XL) / 2.0
+        half = text_w("itzzyashpandey", F_MONO_XL) / 2.0
         cwx = cw(F_MONO_XL)
         x = cx + half + cwx * 0.35
         d.rectangle([S(x), S(214), S(x + cwx * 0.8), S(240)],
