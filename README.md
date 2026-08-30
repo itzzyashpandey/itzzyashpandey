@@ -10,7 +10,7 @@
   <a href="https://github.com/itzzyashpandey"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-0d0e12?style=flat-square&logo=github&logoColor=8b95f0" /></a>
   <a href="https://www.linkedin.com/in/yashpandey1272000"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0d0e12?style=flat-square&logo=linkedin&logoColor=8b95f0" /></a>
   <!--<a href="https://www.researchgate.net/profile/Erwin-Lejeune"><img alt="ResearchGate" src="https://img.shields.io/badge/ResearchGate-0d0e12?style=flat-square&logo=researchgate&logoColor=8b95f0" /></a>-->
-  <a href="https://open.spotify.com/user/11147618695"><img alt="Spotify" src="https://img.shields.io/badge/Spotify-0d0e12?style=flat-square&logo=spotify&logoColor=8b95f0" /></a>
+  <!--<a href="https://open.spotify.com/user/11147618695"><img alt="Spotify" src="https://img.shields.io/badge/Spotify-0d0e12?style=flat-square&logo=spotify&logoColor=8b95f0" /></a>-->
   <a href="mailto:yashpandey1272000@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-0d0e12?style=flat-square&logo=gmail&logoColor=8b95f0" /></a>
 </p>
 
